@@ -6,19 +6,20 @@ The goal is to practice and demonstrate key SQL skills such as data cleaning, ag
 ---
 
 ## 📂 Project Structure
+```text
 IMDB_SQL/
-├── imdb_top_1000.csv # Original dataset
-├── imdb_top_1000.db # SQLite database (generated)
-├── Load_csv_to_table.py # Python script to load and clean data
+├── imdb_top_1000.csv            # Original dataset
+├── imdb_top_1000.db             # SQLite database (generated)
+├── Load_csv_to_table.py         # Python script to load and clean data
 ├── sql/
-│ ├── 01_basic_queries.sql
-│ ├── 02_ranking_queries.sql
-│ ├── 03_yearly_stats.sql
-│ ├── 04_director_ratings.sql
-│ ├── 05_genre_analysis.sql
-│ └── 06_data_quality_checks.sql
+│   ├── 01_basic_queries.sql
+│   ├── 02_ranking_queries.sql
+│   ├── 03_yearly_stats.sql
+│   ├── 04_director_ratings.sql
+│   ├── 05_genre_analysis.sql
+│   └── 06_data_quality_checks.sql
 └── README.md
-
+```
 ## Technologies Used
 
 - **SQLite** (via DBeaver)
