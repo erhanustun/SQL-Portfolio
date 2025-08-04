@@ -7,8 +7,6 @@ The goal is to practice and demonstrate key SQL skills such as data cleaning, ag
 
 ## 📂 Project Structure
 
-## 📂 Project Structure
-
 ```text
 IMDB_SQL/
 ├── imdb_top_1000.csv            # Original dataset
