@@ -83,3 +83,13 @@ FROM imdb_movies
 WHERE IMDB_Rating > 8.0 AND Gross_Millions < 10 AND NOT Gross_Millions=0
 ORDER BY IMDB_Rating DESC;
 
+-- 7. Most prolific directors by year (more than 1 movie in the same year)
+SELECT 
+  Director, 
+  Released_Year, 
+  COUNT(*) AS Film_Count
+FROM imdb_movies
+GROUP BY Director, Released_Year
+HAVING COUNT(*) > 1
+ORDER BY Film_Count DESC;
+
