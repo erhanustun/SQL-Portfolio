@@ -73,3 +73,13 @@ GROUP BY Star
 HAVING COUNT(*) >= 5
 ORDER BY Avg_Rating DESC
 LIMIT 10;
+
+-- 6. High-rated movies that underperformed at the box office 
+SELECT  
+  Series_Title,  
+  IMDB_Rating,  
+  Gross_Millions 
+FROM imdb_movies 
+WHERE IMDB_Rating > 8.0 AND Gross_Millions < 10 
+ORDER BY IMDB_Rating DESC;
+
