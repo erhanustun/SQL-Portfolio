@@ -80,6 +80,6 @@ SELECT
   IMDB_Rating,  
   Gross_Millions 
 FROM imdb_movies 
-WHERE IMDB_Rating > 8.0 AND Gross_Millions < 10 
+WHERE IMDB_Rating > 8.0 AND Gross_Millions < 10 AND NOT Gross_Millions=0
 ORDER BY IMDB_Rating DESC;
 
