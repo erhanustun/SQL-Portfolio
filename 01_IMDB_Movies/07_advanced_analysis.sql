@@ -11,3 +11,25 @@ SELECT *
 FROM RankedMovies
 WHERE rn = 1
 ORDER BY Released_Year;
+
+-- 2. Directors who worked with the same group of 4 actors in multiple films
+WITH DirectorStarPairs AS (
+    SELECT Director, Star1 AS Star, Series_Title FROM imdb_movies
+    UNION ALL
+    SELECT Director, Star2 AS Star, Series_Title FROM imdb_movies
+    UNION ALL
+    SELECT Director, Star3 AS Star, Series_Title FROM imdb_movies
+    UNION ALL
+    SELECT Director, Star4 AS Star, Series_Title FROM imdb_movies
+)
+SELECT 
+    Director,
+    Star,
+    COUNT(*) AS OrtakFilmSayisi,
+    GROUP_CONCAT(Series_Title) AS OrtakFilmler
+FROM DirectorStarPairs
+WHERE Star IS NOT NULL
+GROUP BY Director, Star
+HAVING COUNT(*) > 1
+ORDER BY OrtakFilmSayisi DESC
+LIMIT 10;
