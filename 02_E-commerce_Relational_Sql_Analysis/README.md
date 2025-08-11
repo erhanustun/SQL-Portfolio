@@ -1,4 +1,4 @@
--- Brazilian E-Commerce SQL Analysis --
+## **Brazilian E-Commerce SQL Analysis**
 ```text
 This project analyzes the Brazilian E-Commerce Public Dataset from Olist using Python and SQL.
 It demonstrates a full data pipeline: loading, cleaning, relational database design, and SQL queries for insights.
