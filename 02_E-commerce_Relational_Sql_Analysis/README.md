@@ -44,9 +44,7 @@ Matplotlib / Seaborn (optional) → Data visualization
 ---
 
 📂 Project Structure
-plaintext
-Kopyala
-Düzenle
+```text
 brazilian-ecommerce-sql-analysis/
 ├── data/
 │   ├── olist_customers_dataset.csv
@@ -61,6 +59,7 @@ brazilian-ecommerce-sql-analysis/
 │   ├── 04_customer_behavior.sql
 │   └── 05_product_performance.sql
 └── README.md
+```
 
 ---
 
