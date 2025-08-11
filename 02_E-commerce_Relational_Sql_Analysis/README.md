@@ -53,14 +53,15 @@ brazilian-ecommerce-sql-analysis/
 │   ├── olist_geolocation_dataset.csv
 │   ├── ...
 ├── load_data.py               # Load & clean CSV files into database
-├── database_schema.sql        # CREATE TABLE scripts with relationships
 ├── sql/
-│   ├── 01_basic_queries.sql
-│   ├── 02_joins_analysis.sql
-│   ├── 03_window_functions.sql
-│   ├── 04_customer_behavior.sql
-│   └── 05_product_performance.sql
+│   ├── 01_create_table.sql
+│   ├── 02_basic_queries.sql
+│   ├── 03_joins_analysis.sql
+│   ├── 04_window_functions.sql
+│   ├── 05_customer_behavior.sql
+│   └── 06_product_performance.sql
 └── README.md
+
 ```
 
 ---
