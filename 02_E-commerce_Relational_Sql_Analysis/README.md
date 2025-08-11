@@ -2,7 +2,10 @@
 This project analyzes the Brazilian E-Commerce Public Dataset from Olist using Python and SQL.
 It demonstrates a full data pipeline: loading, cleaning, relational database design, and SQL queries for insights.
 
+---
+
 📊 Dataset Overview
+```text
 The dataset contains multiple CSV files representing different entities in an e-commerce business:
 
 olist_customers_dataset.csv → Customer details
@@ -22,8 +25,12 @@ olist_products_dataset.csv → Product details
 olist_sellers_dataset.csv → Seller details
 
 product_category_name_translation.csv → Product category translations
+```
+---
 
 Source: Kaggle - Brazilian E-Commerce Public Dataset by Olist
+
+---
 
  --Tech Stack
 Python → Pandas for data cleaning & preprocessing
@@ -33,6 +40,8 @@ SQLite / PostgreSQL → Relational database storage
 SQL → Data exploration, joins, window functions
 
 Matplotlib / Seaborn (optional) → Data visualization
+
+---
 
 📂 Project Structure
 plaintext
@@ -53,6 +62,8 @@ brazilian-ecommerce-sql-analysis/
 │   └── 05_product_performance.sql
 └── README.md
 
+---
+
 -- How to Run
 1. Clone the repository
 git clone https://github.com/<your-username>/brazilian-ecommerce-sql-analysis.git
@@ -68,9 +79,12 @@ python load_data.py
 Open the database file (ecommerce.db) in your SQL IDE (e.g., DBeaver, SQLiteStudio)
 Execute SQL scripts from the sql/ folder
 
+---
+
 -- Example Analyses
 Most popular product categories
 Average delivery time per state
 Customer lifetime value estimation
 Payment method trends over time
 Seller performance ranking
+```bash
