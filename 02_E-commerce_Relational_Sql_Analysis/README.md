@@ -64,6 +64,7 @@ brazilian-ecommerce-sql-analysis/
 ---
 
 -- How to Run
+```text
 1. Clone the repository
 git clone https://github.com/<your-username>/brazilian-ecommerce-sql-analysis.git
 cd brazilian-ecommerce-sql-analysis
@@ -77,13 +78,14 @@ python load_data.py
 4. Run SQL queries
 Open the database file (ecommerce.db) in your SQL IDE (e.g., DBeaver, SQLiteStudio)
 Execute SQL scripts from the sql/ folder
-
+```
 ---
 
 -- Example Analyses
+```text
 Most popular product categories
 Average delivery time per state
 Customer lifetime value estimation
 Payment method trends over time
 Seller performance ranking
-```bash
+```
