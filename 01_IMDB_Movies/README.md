@@ -62,8 +62,5 @@ IMDB_SQL/
 3. Install dependencies
 4. pip install pandas
 5. python Load_csv_to_table.py
-```bash
 
-Author
-Erhan Üstün
-Data Engineering Portfolio Project
+
