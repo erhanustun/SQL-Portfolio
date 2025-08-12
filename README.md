@@ -11,6 +11,6 @@ Dataset: [IMDb Top 1000 Movies - Kaggle](https://www.kaggle.com/datasets/ankushp
 This project presents a complete end-to-end SQL analysis based on the **Brazilian E-Commerce Public Dataset** from Olist.  
 The goal is to design a relational database, load multiple CSV files, and perform SQL queries covering **data exploration, aggregation, joins, and window functions** using SQLite and Python.
 
-## Source:
+## Source
 Dataset: [Kaggle - Brazilian E-Commerce Public Dataset by Olist](https://www.kaggle.com/datasets/olistbr/brazilian-ecommerce)
 
