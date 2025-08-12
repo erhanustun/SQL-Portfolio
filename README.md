@@ -12,5 +12,5 @@ This project presents a complete end-to-end SQL analysis based on the **Brazilia
 The goal is to design a relational database, load multiple CSV files, and perform SQL queries covering **data exploration, aggregation, joins, and window functions** using SQLite and Python.
 
 ## Source:
-Dataset:[Kaggle - Brazilian E-Commerce Public Dataset by Olist](https://www.kaggle.com/datasets/olistbr/brazilian-ecommerce)
+Dataset: [Kaggle - Brazilian E-Commerce Public Dataset by Olist](https://www.kaggle.com/datasets/olistbr/brazilian-ecommerce)
 
