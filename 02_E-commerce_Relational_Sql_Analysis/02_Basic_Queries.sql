@@ -16,3 +16,15 @@ JOIN orders o
 GROUP BY c.customer_unique_id
 ORDER BY total_orders DESC
 LIMIT 10;
+
+-- 3. Total Sales by Product Category
+SELECT 
+    pct.product_category_name_english AS category,
+    ROUND(SUM(oi.price), 2) AS total_sales
+FROM order_items oi
+JOIN products p 
+    ON oi.product_id = p.product_id
+JOIN product_category_name_translation pct
+    ON p.product_category_name = pct.product_category_name
+GROUP BY category
+ORDER BY total_sales DESC;
