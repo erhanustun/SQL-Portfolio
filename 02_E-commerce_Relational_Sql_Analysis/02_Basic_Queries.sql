@@ -28,3 +28,14 @@ JOIN product_category_name_translation pct
     ON p.product_category_name = pct.product_category_name
 GROUP BY category
 ORDER BY total_sales DESC;
+
+-- 4. Orders Distribution by City
+SELECT 
+    c.customer_city,
+    COUNT(DISTINCT o.order_id) AS total_orders
+FROM customers c
+JOIN orders o 
+    ON c.customer_id = o.customer_id
+GROUP BY c.customer_city
+ORDER BY total_orders DESC
+LIMIT 10;
