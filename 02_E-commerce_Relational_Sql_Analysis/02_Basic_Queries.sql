@@ -55,3 +55,14 @@ SELECT
 FROM order_payments
 GROUP BY payment_type
 ORDER BY usage_count DESC;
+
+-- 7. Monthly Sales Trend
+SELECT 
+    strftime('%Y-%m', order_purchase_timestamp) AS year_month,
+    ROUND(SUM(oi.price + oi.freight_value), 2) AS total_revenue
+FROM orders o
+JOIN order_items oi 
+    ON o.order_id = oi.order_id
+GROUP BY year_month
+ORDER BY year_month;
+
