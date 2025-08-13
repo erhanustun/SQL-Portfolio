@@ -39,3 +39,11 @@ JOIN orders o
 GROUP BY c.customer_city
 ORDER BY total_orders DESC
 LIMIT 10;
+
+-- 5. Average Delivery Time (in Days)
+SELECT 
+    ROUND(AVG(
+        JULIANDAY(order_delivered_customer_date) - JULIANDAY(order_purchase_timestamp)
+    ), 2) AS avg_delivery_days
+FROM orders
+WHERE order_delivered_customer_date IS NOT NULL;
