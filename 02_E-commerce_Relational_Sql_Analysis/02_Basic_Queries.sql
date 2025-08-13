@@ -47,3 +47,11 @@ SELECT
     ), 2) AS avg_delivery_days
 FROM orders
 WHERE order_delivered_customer_date IS NOT NULL;
+
+-- 6. Most Used Payment Method
+SELECT 
+    payment_type,
+    COUNT(*) AS usage_count
+FROM order_payments
+GROUP BY payment_type
+ORDER BY usage_count DESC;
