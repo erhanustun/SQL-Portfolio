@@ -11,3 +11,15 @@ JOIN orders o ON c.customer_id = o.customer_id
 JOIN order_items oi ON o.order_id = oi.order_id
 GROUP BY c.customer_id
 ORDER BY total_spent DESC;
+
+-- 2. Repeat Purchase Rate
+WITH customer_orders AS (
+    SELECT
+        customer_id,
+        COUNT(DISTINCT order_id) AS order_count
+    FROM orders
+    GROUP BY customer_id
+)
+SELECT
+    COUNT(CASE WHEN order_count > 1 THEN 1 END)::decimal / COUNT(*) * 100 AS repeat_purchase_percentage
+FROM customer_orders;
