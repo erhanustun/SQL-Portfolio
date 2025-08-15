@@ -23,3 +23,9 @@ WITH customer_orders AS (
 SELECT
     COUNT(CASE WHEN order_count > 1 THEN 1 END)::decimal / COUNT(*) * 100 AS repeat_purchase_percentage
 FROM customer_orders;
+
+-- 3. Average Revenue Per User (ARPU)
+SELECT
+    SUM(oi.price + oi.freight_value) / COUNT(DISTINCT o.customer_id) AS arpu
+FROM orders o
+JOIN order_items oi ON o.order_id = oi.order_id;
