@@ -33,10 +33,10 @@ JOIN order_items oi ON o.order_id = oi.order_id;
 -- 4. Category-wise Monthly Revenue Growth
 SELECT
     p.product_category_name,
-    DATE_TRUNC('month', o.order_purchase_timestamp) AS month,
+    strftime('%Y-%m', o.order_purchase_timestamp) AS month,
     SUM(oi.price) AS monthly_revenue
 FROM orders o
 JOIN order_items oi ON o.order_id = oi.order_id
 JOIN products p ON oi.product_id = p.product_id
-GROUP BY p.product_category_name, DATE_TRUNC('month', o.order_purchase_timestamp)
+GROUP BY p.product_category_name, month
 ORDER BY p.product_category_name, month;
