@@ -49,3 +49,14 @@ FROM orders o
 WHERE o.order_delivered_customer_date IS NOT NULL
 GROUP BY delay_days
 ORDER BY delay_days DESC;
+
+-- 6. Top 10 Cities by Revenue per Order
+SELECT
+    c.customer_city,
+    SUM(oi.price + oi.freight_value) / COUNT(DISTINCT o.order_id) AS avg_revenue_per_order
+FROM customers c
+JOIN orders o ON c.customer_id = o.customer_id
+JOIN order_items oi ON o.order_id = oi.order_id
+GROUP BY c.customer_city
+ORDER BY avg_revenue_per_order DESC
+LIMIT 10;
