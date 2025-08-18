@@ -40,3 +40,12 @@ JOIN order_items oi ON o.order_id = oi.order_id
 JOIN products p ON oi.product_id = p.product_id
 GROUP BY p.product_category_name, month
 ORDER BY p.product_category_name, month;
+
+-- 5. Delivery Performance Analysis
+SELECT
+    JULIANDAY(o.order_delivered_customer_date) - JULIANDAY(o.order_estimated_delivery_date) AS delay_days,
+    COUNT(*) AS number_of_orders
+FROM orders o
+WHERE o.order_delivered_customer_date IS NOT NULL
+GROUP BY delay_days
+ORDER BY delay_days DESC;
